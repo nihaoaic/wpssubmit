@@ -42,7 +42,8 @@ def give_cookie():
 
     new_url = json_res["url"]
     change = json_res["channel_id"]
-    response = requests.get(new_url, headers=headers,params=params).content
+    print(new_url)
+    response = requests.get(new_url, headers=headers).content
 
     with open("./p1.png","wb")as f:
         f.write(response)
